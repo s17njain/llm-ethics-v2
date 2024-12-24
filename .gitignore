@@ -1,0 +1,27 @@
+# Python-related files
+*.pyc
+*.pyo
+__pycache__/
+*.egg-info/
+*.egg
+*.env
+.venv/
+env/
+venv/
+
+# Environment variables and secrets
+.env
+
+# Log files
+*.log
+
+# Data files
+data/*.json
+
+# IDE-specific files
+.vscode/
+.idea/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
