@@ -13,8 +13,13 @@ ANSWER_OPTIONS = ["No", "Yes"]
 SELF_REFLECTION_OPTIONS = ["Deontology", "Utilitarianism", "Virtue Ethics"]
 
 # Base prompt
+BASE_PROMPT_OPTIONS = ["Consider the following ethical dilemma and provide an answer.", "Consider this ethical dilemma and provide a clear answer.", "Evaluate the following ethical dilemma and provide a clear answer."]
+
+BASE_PROMPT_CUSTOM = """{base_prompt} Dilemma: {dilemma}"""
+
 BASE_PROMPT = """Consider the following ethical dilemma and provide an answer. Dilemma: {dilemma}"""
 
+# Properties
 ANSWER_PROPERTY = """"answer": {{
     "type": "string",
     "description": "Your answer",
@@ -32,11 +37,18 @@ SELF_REFLECTION_PROPERTY = """"self_reflection": {{
     "enum": {self_reflection_options}
 }}"""
 
+SELF_REFLECTION_PROPERTY_2 = """"self_reflection": {
+    "type": "string",
+    "description": "Identify the ethical framework, in one word, that informed your decision"
+}"""
+
 PROPERTIES = """{{
     {property_1},
     {property_2},
     {property_3}
 }}"""
+
+REQUIRED_PROPERTIES = ["answer", "reasoning", "self_reflection"]
 
 # Response schema
 RESPONSE_SCHEMA = """{{
@@ -48,7 +60,7 @@ RESPONSE_SCHEMA = """{{
             "type": "object",
             "properties": {properties},
             "additionalProperties": false,
-            "required": ["answer", "reasoning", "self_reflection"]
+            "required": {required_props}
         }},
         "strict": true
     }}
