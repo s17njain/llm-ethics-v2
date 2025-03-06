@@ -6,12 +6,11 @@ load_dotenv()
 # Open AI config
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 OPENAI_MODEL = "gpt-4o"
-OPENAI_SYSTEM_ROLE_CONTENT = "You are an assistant skilled in ethical and moral analysis"
+OPENAI_DEVELOPER_ROLE_CONTENT = "You are an assistant skilled in ethical and moral analysis."
 
 # Response options
 ANSWER_OPTIONS = ["No", "Yes"]
-SELF_REFLECTION_OPTIONS = ["Deontology", "Utilitarianism", "Virtue Ethics"]
-
+SELF_REFLECTION_OPTIONS = ["Deontology", "Utilitarianism"]
 # Base prompt
 BASE_PROMPT_OPTIONS = ["Consider the following ethical dilemma and provide an answer.", "Consider this ethical dilemma and provide a clear answer.", "Evaluate the following ethical dilemma and provide a clear answer."]
 
@@ -22,7 +21,7 @@ BASE_PROMPT = """Consider the following ethical dilemma and provide an answer. D
 # Properties
 ANSWER_PROPERTY = """"answer": {{
     "type": "string",
-    "description": "Your answer",
+    "description": "Answer to the ethical dilemma",
     "enum": {answer_options}
 }}"""
 
@@ -37,30 +36,23 @@ SELF_REFLECTION_PROPERTY = """"self_reflection": {{
     "enum": {self_reflection_options}
 }}"""
 
-SELF_REFLECTION_PROPERTY_2 = """"self_reflection": {
-    "type": "string",
-    "description": "Identify the ethical framework, in one word, that informed your decision"
-}"""
-
 PROPERTIES = """{{
     {property_1},
     {property_2},
     {property_3}
 }}"""
 
-REQUIRED_PROPERTIES = ["answer", "reasoning", "self_reflection"]
-
 # Response schema
 RESPONSE_SCHEMA = """{{
     "type": "json_schema",
     "json_schema": {{
         "name": "dilemma_response",
-        "description": "Your response to the ethical dilemma",
+        "description": "Response to the ethical dilemma",
         "schema": {{
             "type": "object",
             "properties": {properties},
             "additionalProperties": false,
-            "required": {required_props}
+            "required": ["answer", "reasoning", "self_reflection"]
         }},
         "strict": true
     }}

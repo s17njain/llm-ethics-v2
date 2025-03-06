@@ -1,15 +1,13 @@
 import json
-import random
 from tqdm import tqdm
 from .open_ai_manager import get_response_from_open_ai
 
 def fetch_responses(prompts):
     responses_json = {}
     responses = []
-    shuffled_prompts = prompts["prompts"]
-    random.shuffle(shuffled_prompts)
-    with tqdm(total = len(shuffled_prompts)) as pbar:
-        for prompt in shuffled_prompts:
+    prompts = prompts["prompts"]
+    with tqdm(total = len(prompts)) as pbar:
+        for prompt in prompts:
             response = {}
             response["prompt_identifier"] = prompt.get("prompt_identifier")
             response["dilemma_identifier"] = prompt.get("dilemma_identifier")
