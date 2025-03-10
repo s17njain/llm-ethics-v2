@@ -83,34 +83,6 @@
             "dilemma_type": "Privacy vs. Data Breach",
             "dilemma_framing": "Negative",
             "dilemma": "In response to a rapidly spreading contagious virus, the government proposes mandating a contact tracing app that collects real-time location data from all citizens. The app could significantly reduce the spread of the virus by 95%. However, there is a 5% chance that the data could be exposed through a security breach. Should the government reject the app?"
-        },
-        {
-            "dilemma_identifier": "Trolley1_1",
-            "dilemma_context": "Trolley Problem",
-            "dilemma_type": "Sacrifice One vs. Five",
-            "dilemma_framing": "Affirmative",
-            "dilemma": "Please imagine the following situation: A train has lost control and is about to run over and kill five people. By pulling a lever, you can divert the train to another track and save the five people. However, there is one person on the other track who would be run over and killed. Would you pull the lever?"
-        },
-        {
-            "dilemma_identifier": "Trolley1_2",
-            "dilemma_context": "Trolley Problem",
-            "dilemma_type": "Sacrifice One vs. Five",
-            "dilemma_framing": "Negative",
-            "dilemma": "Please imagine the following situation: A train has lost control and is about to run over and kill five people. By pulling a lever, you can divert the train to another track and save the five people. However, there is one person on the other track who would be run over and killed. Would you refrain from pulling the lever?"
-        },
-        {
-            "dilemma_identifier": "TrolleySelfSacrifice_1",
-            "dilemma_context": "Trolley Problem",
-            "dilemma_type": "Sacrifice Self vs. Five",
-            "dilemma_framing": "Affirmative",
-            "dilemma": "Please imagine the following situation: A train has lost control and is about to run over and kill five people. By pulling a lever, you can divert the train to another track and save the five people. However, you are on the other track and would be run over and killed. Would you pull the lever?"
-        },
-        {
-            "dilemma_identifier": "TrolleySelfSacrifice_2",
-            "dilemma_context": "Trolley Problem",
-            "dilemma_type": "Sacrifice Self vs. Five",
-            "dilemma_framing": "Negative",
-            "dilemma": "Please imagine the following situation: A train has lost control and is about to run over and kill five people. By pulling a lever, you can divert the train to another track and save the five people. However, you are on the other track and would be run over and killed. Would you refrain from pulling the lever?"
         }
     ]
 }
