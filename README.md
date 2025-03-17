@@ -25,4 +25,9 @@ Designed to assess ethical reasoning capablilites of LLMs.
    python main.py get_responses --input path/to/prompts.json --output path/where/to/save/responses.json
    ```
 
-## Results
+## Initial Results
+### Distribution of Answer (Yes/No) by Dilemma Context
+![Distribution of Answer (Yes/No) by Dilemma Context](https://github.com/user-attachments/assets/9441e0b7-3f40-4e70-ba50-f93abd99dca4)
+
+### Distribution of Ethical Framework (Deontology/Utilitarianism) by Dilemma Context
+![Distribution of Ethical Framework (Deontology/Utilitarianism) by Dilemma Context](https://github.com/user-attachments/assets/721a1183-e513-4a28-bc6b-73f1653f3c3e)
